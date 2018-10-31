@@ -21,33 +21,19 @@ export default {
     },
     methods: {
         togglePopup() {
-            this.setData({
-                showPopup: !this.data.showPopup
-            });
+            this.showPopup = !this.showPopup
         },
-
         toggleLeftPopup() {
-            this.setData({
-                showLeftPopup: !this.data.showLeftPopup
-            });
+            this.showLeftPopup = !this.showLeftPopup
         },
-
         toggleRightPopup() {
-            this.setData({
-                showRightPopup: !this.data.showRightPopup
-            });
+            this.showRightPopup = !this.showRightPopup
         },
-
         toggleBottomPopup() {
-            this.setData({
-                showBottomPopup: !this.data.showBottomPopup
-            });
+            this.showBottomPopup = !this.showBottomPopup
         },
-
         toggleTopPopup() {
-            this.setData({
-                showTopPopup: !this.data.showTopPopup
-            });
+            this.showTopPopup = !this.showTopPopup
         }
     },
 }

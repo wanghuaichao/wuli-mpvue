@@ -7,8 +7,6 @@
         :loading="loading" 
         :open-type="openType" 
         :app-parameter="appParameter" 
-        :hover-start-time="hoverStartTime" 
-        :hover-stay-time="hoverStayTime" 
         :lang="lang" 
         :session-from="sessionFrom" 
         :send-message-title="sendMessageTitle" 
@@ -35,62 +33,18 @@ export default {
             type: String,
             default: 'normal'
         },
-        plain: {
-            type: Boolean,
-            default: false
-        },
-        disabled: {
-            type: Boolean,
-            default: false
-        },
-        btnClass: {
-            type: String,
-            default: false
-        },
-        loading: {
-            type: Boolean,
-            default: false
-        },
-        openType: {
-            type: String,
-            default: ''
-        },
-        appParameter: {
-            type: String,
-            default: ''
-        },
-        hoverStartTime: {
-            type: Number,
-            default: 20
-        },
-        hoverStayTime: {
-            type: Number,
-            default: 70
-        },
-        lang: {
-            type: String,
-            default: 'en'
-        },
-        sessionFrom: {
-            type: String,
-            default: ''
-        },
-        sendMessageTitle: {
-            type: String,
-            default: ''
-        },
-        sendMessagePath: {
-            type: String,
-            default: ''
-        },
-        sendMessageImg: {
-            type: String,
-            default: ''
-        },
-        showMessageCard: {
-            type: Boolean,
-            default: false
-        }
+        plain: Boolean,
+        disabled: Boolean,
+        btnClass: String,
+        loading: Boolean,
+        openType: String,
+        appParameter: String,
+        lang: String,
+        sessionFrom: String,
+        sendMessageTitle: String,
+        sendMessagePath: String,
+        sendMessageImg: String,
+        showMessageCard: Boolean
     },
     computed: {
         buttonClass() {
