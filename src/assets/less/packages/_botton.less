@@ -4,8 +4,7 @@
 .wuli-btn {
     display: block;
     position: relative;
-    color: #333;
-    background-color: @--color-white;
+    
     margin-bottom: 10px;
     padding-left: 15px;
     padding-right: 15px;
@@ -31,6 +30,13 @@
         border: 0 solid #e5e5e5;
         border-width: 1px;
         border-radius: 4px;
+    }
+    &__normal {
+        color: #333;
+        background-color: @--color-white;
+        &::after {
+            border-color: #e5e5e5;
+        }
     }
     &__primary {
         color: @--color-white;

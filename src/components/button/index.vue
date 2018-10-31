@@ -1,23 +1,11 @@
 <template>
     <button 
-        :class="buttonClass" 
-        :type="type" 
+        class="wuli-btn"
+        :class="[buttonClass, typeClass, {sizeClass, loadClass, disabledClass}]" 
         :plain="plain" 
         :disabled="disabled" 
         :loading="loading" 
-        :open-type="openType" 
-        :app-parameter="appParameter" 
-        :lang="lang" 
-        :session-from="sessionFrom" 
-        :send-message-title="sendMessageTitle" 
-        :send-message-path="sendMessagePath" 
-        :send-message-img="sendMessageImg" 
-        :show-message-card="showMessageCard" 
-        @click="click" 
-        @getuserinfo="getuserinfo" 
-        @contact="contact" 
-        @getphonenumber="getphonenumber" 
-        @error="error">
+        @click="click">
         <slot></slot>
     </button>
 </template>
@@ -27,48 +15,54 @@ export default {
     props: {
         type: {
             type: String,
-            default: 'default'
+            default: 'normal'
         },
         size: {
             type: String,
             default: 'normal'
         },
-        plain: Boolean,
-        disabled: Boolean,
-        btnClass: String,
-        loading: Boolean,
-        openType: String,
-        appParameter: String,
-        lang: String,
-        sessionFrom: String,
-        sendMessageTitle: String,
-        sendMessagePath: String,
-        sendMessageImg: String,
-        showMessageCard: Boolean
+        plain: {
+            type: Boolean,
+            default: false
+        },
+        disabled: {
+            type: Boolean,
+            default: false
+        },
+        styles: {
+            type: String,
+            default: ''
+        },
+        loading: {
+            type: Boolean,
+            default: false
+        }
     },
     computed: {
         buttonClass() {
-            let buttonClass = `wuli-btn wuli-btn__${this.size} ${this.btnClass}`
+            let buttonClass = `${this.styles}`
             return buttonClass
-        }
+        },
+        typeClass() {
+            let typeClass = `wuli-btn__${this.type}`
+            return typeClass
+        },
+        sizeClass() {
+            let sizeClass = `wuli-btn__${this.size}`
+            return sizeClass
+        },
+        loadClass() {
+            return this.loading ? `wuli-btn__${this.loading}` : ''
+        },
+        disabledClass() {
+            return this.disabled ? `wuli-btn__${this.disabled}` : ''
+        },
     },
     methods: {
         click(e) {
             if (!this.loading && !this.disabled) {
                 this.$emit('click', e)
             }
-        },
-        getuserinfo(e) {
-            this.$emit('getuserinfo', e)
-        },
-        contact(e) {
-            this.$emit('contact', e)
-        },
-        getphonenumber(e) {
-            this.$emit('getphonenumber', e)
-        },
-        error(e) {
-            this.$emit('error', e)
         }
     }
 }
