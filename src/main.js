@@ -18,6 +18,7 @@ export default {
         pages: [
             '^pages/dashboard/main', 
             'pages/button/main',
+            'pages/cell/main'
         ],
         window: {
             backgroundTextStyle: 'light',

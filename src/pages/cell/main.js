@@ -6,7 +6,7 @@ app.$mount()
 
 export default {
     config: {
-        navigationBarTitleText: '跳转页测试'
+        navigationBarTitleText: '单元格'
     }
 }
 
