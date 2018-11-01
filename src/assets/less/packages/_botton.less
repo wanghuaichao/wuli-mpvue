@@ -4,7 +4,6 @@
 .wuli-btn {
     display: block;
     position: relative;
-    
     margin-bottom: 10px;
     padding-left: 15px;
     padding-right: 15px;
@@ -98,7 +97,7 @@
         line-height: 50px;
         height: 50px;
     }
-    &__loading {
+    &.is-loading {
         color: transparent;
         opacity: 1;
         &::before {
@@ -118,15 +117,21 @@
             animation-iteration-count: infinite;
         }
     }
-    &.wuli-btn__disabled {
+    &.is-disabled {
         color: #999!important;
         background: #f8f8f8!important;
         border-color: #e5e5e5!important;
         cursor: not-allowed!important;
         opacity: 1!important;
+        &::after {
+            border-color: #e5e5e5!important;
+        }
     }
-    &.wuli-btn__disabled::after {
-        border-color: #e5e5e5!important;
+    &.is-round {
+        .border-radius(20px);
+    }
+    &.is-circle {
+        .border-radius(50%);
     }
     &__last-child, 
     &:last-child {
@@ -143,10 +148,10 @@
     opacity: .9;
 }
 
-.wuli-btn__success.wuli-btn__loading::before, 
-.wuli-btn__danger.wuli-btn__loading::before, 
-.wuli-btn__primary.wuli-btn__loading::before, 
-.wuli-btn__warn.wuli-btn__loading::before {
+.wuli-btn__success.is-loading::before, 
+.wuli-btn__danger.is-loading::before, 
+.wuli-btn__primary.is-loading::before, 
+.wuli-btn__warn.is-loading::before {
     border-color: #fff rgba(0, 0, 0, .1) rgba(0, 0, 0, .1) rgba(0, 0, 0, .1);
 }
 

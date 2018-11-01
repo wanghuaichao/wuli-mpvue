@@ -1,7 +1,17 @@
 <template>
     <button 
         class="wuli-btn"
-        :class="[buttonClass, typeClass, {sizeClass, loadClass, disabledClass}]" 
+        :class="[
+            type ? 'wuli-btn__' + type : '',
+            size ? 'wuli-btn__' + size : '',
+            styles ? styles : '',
+            {
+                'is-loading': loading, 
+                'is-disabled': disabled,
+                'is-round': round,
+                'is-circle': circle
+            }
+        ]" 
         :plain="plain" 
         :disabled="disabled" 
         :loading="loading" 
@@ -36,27 +46,21 @@ export default {
         loading: {
             type: Boolean,
             default: false
+        },
+        round: {
+            type: Boolean,
+            default: false
+        },
+        circle: {
+            type: Boolean,
+            default: false
         }
     },
     computed: {
         buttonClass() {
             let buttonClass = `${this.styles}`
             return buttonClass
-        },
-        typeClass() {
-            let typeClass = `wuli-btn__${this.type}`
-            return typeClass
-        },
-        sizeClass() {
-            let sizeClass = `wuli-btn__${this.size}`
-            return sizeClass
-        },
-        loadClass() {
-            return this.loading ? `wuli-btn__${this.loading}` : ''
-        },
-        disabledClass() {
-            return this.disabled ? `wuli-btn__${this.disabled}` : ''
-        },
+        }
     },
     methods: {
         click(e) {
