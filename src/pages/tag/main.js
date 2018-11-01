@@ -6,7 +6,7 @@ app.$mount()
 
 export default {
     config: {
-        navigationBarTitleText: 'Tag 标记'
+        navigationBarTitleText: 'Tag 标签'
     }
 }
 
