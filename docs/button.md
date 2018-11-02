@@ -3,7 +3,7 @@
 
 > `<wp-button />` 通用按钮组件
 
-?> `在 `mpvue` 框架中，`Button`的各个属性完美支持，在某些写法上略有不同。主要涉及到的类型是 `Handler`的属性。
+?> 在 `mpvue` 框架中，`Button`的各个属性完美支持，在某些写法上略有不同。主要涉及到的类型是 `Handler`的属性。
 
 !> `bindgetuserinfo` 要写成 `@getuserinfo`，`bindcontact` 要写成 `@contact`，`bindgetphonenumber` 要写成 `@getphonenumber`，`binderrror` 要写成 `@errror`。
 

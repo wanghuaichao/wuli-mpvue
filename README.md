@@ -26,5 +26,5 @@ npm run dev
 
 > 组件截图
 
-![](https://github.com/Aaron52077/wuli-mpvue/raw/master/docs/imgs/img_01.png)\
+![](https://github.com/Aaron52077/wuli-mpvue/raw/master/docs/imgs/img_01.png)
 ![](https://github.com/Aaron52077/wuli-mpvue/raw/master/docs/imgs/img_02.png)

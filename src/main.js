@@ -26,6 +26,17 @@ export default {
             navigationBarTitleText: 'wuli-mpVue',
             backgroundColor: "#eeeeee",
             navigationBarTextStyle: 'black'
+        },
+        tabBar: {
+            "color": "#202020",
+            "selectedColor": "#ec5045",
+            "list": [{
+                pagePath: "pages/button/main",
+                text: "按钮"
+            }, {
+                pagePath: "pages/cell/main",
+                text: "单元格"
+            }]
         }
     }
 }
