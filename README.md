@@ -1,16 +1,26 @@
 # wuli-mpvue
-基于mpvue的轻量级移动UI组件
+`wuli-mpvue`是基于 [mpvue](https://github.com/Meituan-Dianping/mpvue) 的轻量级移动UI组件，保留了 [wuli-ui](https://github.com/Aaron52077/wuli-ui) 的视觉规范，旨在提高小程序开发体验，同时方便开发者更加便捷的进行编程（ps：up主搬砖中...文档会陆续更新的）。
+
+?> `wuli-mpvue` 中组件通常都是以 `<wp-###>` 开头。
+
+> 开发预览
 
 ``` bash
-# install dependencies
-npm install
+# 1. git clone
+git clone https://github.com/Aaron52077/wuli-mpvue.git
 
-# serve with hot reload at localhost:8080
+# 2. 安装依赖
+npm install (cnpm install)/(cnpm i)
+
+# 3. 启动程序
 npm run dev
 
-# build for production with minification
-npm run build
+# 4. 预览
+打开微信开发者工具，新建项目，将目录指向 /dist 即可
 
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
+
+> 组件截图
+
+![](https://github.com/Aaron52077/wuli-mpvue/raw/master/docs/imgs/img_01.png)\
+![](https://github.com/Aaron52077/wuli-mpvue/raw/master/doc/imgs/img_02.png)

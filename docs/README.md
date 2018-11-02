@@ -3,16 +3,24 @@
 
 ?> `wuli-mpvue` 中组件通常都是以 `<wp-###>` 开头。
 
-``` bash
-# install dependencies
-npm install
+> 开发预览
 
-# serve with hot reload at localhost:8080
+``` bash
+# 1. git clone
+git clone https://github.com/Aaron52077/wuli-mpvue.git
+
+# 2. 安装依赖
+npm install (cnpm install)/(cnpm i)
+
+# 3. 启动程序
 npm run dev
 
-# build for production with minification
-npm run build
+# 4. 预览
+打开微信开发者工具，新建项目，将目录指向 /dist 即可
 
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
+
+> 组件截图
+
+![](https://github.com/Aaron52077/wuli-mpvue/raw/master/docs/imgs/img_01.png)\
+![](https://github.com/Aaron52077/wuli-mpvue/raw/master/doc/imgs/img_02.png)
