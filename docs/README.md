@@ -3,6 +3,10 @@
 
 ?> `wuli-mpvue` 中组件通常都是以 `<wp-###>` 开头。
 
+## 文档
+
+[wuli-mpvue 文档](https://aaron52077.github.io/wuli-mpvue/)
+
 > 开发预览
 
 ``` bash
@@ -22,5 +26,5 @@ npm run dev
 
 > 组件截图
 
-![](https://github.com/Aaron52077/wuli-mpvue/raw/master/docs/imgs/img_01.png)\
-![](https://github.com/Aaron52077/wuli-mpvue/raw/master/doc/imgs/img_02.png)
+![](https://github.com/Aaron52077/wuli-mpvue/raw/master/docs/imgs/img_01.png)
+![](https://github.com/Aaron52077/wuli-mpvue/raw/master/docs/imgs/img_02.png)
