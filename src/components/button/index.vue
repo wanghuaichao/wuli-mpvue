@@ -15,7 +15,19 @@
         :plain="plain" 
         :disabled="disabled" 
         :loading="loading" 
-        @click="click">
+        :open-type="openType"
+        :app-parameter="appParameter"
+        :lang="lang"
+        :session-from="sessionFrom"
+        :send-message-title="sendMessageTitle" 
+        :send-message-path="sendMessagePath" 
+        :send-message-img="sendMessageImg" 
+        :show-message-card="showMessageCard"
+        @click="click"
+        @getuserinfo="getuserinfo" 
+        @contact="contact" 
+        @getphonenumber="getphonenumber" 
+        @error="error">
         <slot></slot>
     </button>
 </template>
@@ -46,30 +58,23 @@ export default {
             type: String,
             default: 'normal'
         },
-        plain: {
-            type: Boolean,
-            default: false
-        },
-        disabled: {
-            type: Boolean,
-            default: false
-        },
-        styles: {
+        plain: Boolean,
+        disabled: Boolean,
+        styles: String,
+        loading: Boolean,
+        round: Boolean,
+        circle: Boolean,
+        openType: String,
+        appParameter: String,
+        lang: {
             type: String,
-            default: ''
+            default: 'zh_CN'
         },
-        loading: {
-            type: Boolean,
-            default: false
-        },
-        round: {
-            type: Boolean,
-            default: false
-        },
-        circle: {
-            type: Boolean,
-            default: false
-        }
+        sessionFrom: String,
+        sendMessageTitle: String,
+        sendMessagePath: String,
+        sendMessageImg: String,
+        showMessageCard: Boolean
     },
     computed: {
         buttonClass() {
@@ -82,6 +87,18 @@ export default {
             if (!this.loading && !this.disabled) {
                 this.$emit('click', e)
             }
+        },
+        getuserinfo(e) {
+            this.$emit('getuserinfo', e)
+        },
+        contact(e) {
+            this.$emit('contact', e)
+        },
+        getphonenumber(e) {
+            this.$emit('getphonenumber', e)
+        },
+        error(e) {
+            this.$emit('error', e)
         }
     }
 }
