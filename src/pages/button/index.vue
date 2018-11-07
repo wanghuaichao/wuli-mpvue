@@ -23,17 +23,21 @@
         </div>
 
         <div class="wuli-panel__title">小号按钮</div>
-        <div class="wuli-panel" style="padding: 15px;">
-            <wp-button type="normal" size="small">默认按钮</wp-button>
-            <wp-button type="primary" size="small" round>主要按钮</wp-button>
+        <div class="wuli-panel">
+            <div class="wuli-btns">
+                <wp-button type="normal" size="small">默认按钮</wp-button>
+                <wp-button type="primary" size="small" round>主要按钮</wp-button>
+            </div>
         </div>
 
         <div class="wuli-panel__title">迷你按钮</div>
-        <div class="wuli-panel" style="padding: 15px;">
-            <wp-button type="primary" size="mini">主要按钮</wp-button>
-            <wp-button type="info" size="mini">信息按钮</wp-button>
-            <wp-button type="warn" size="mini" round>警告按钮</wp-button>
-            <wp-button type="danger" size="mini" round>危险按钮</wp-button>
+        <div class="wuli-panel">
+            <div class="wuli-btns">
+                <wp-button type="primary" size="mini">主要按钮</wp-button>
+                <wp-button type="info" size="mini">信息按钮</wp-button>
+                <wp-button type="warn" size="mini" round>警告按钮</wp-button>
+                <wp-button type="danger" size="mini" round>危险按钮</wp-button>
+            </div>
         </div>
 
         <div class="wuli-panel__title">Loading</div>

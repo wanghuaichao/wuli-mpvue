@@ -1,31 +1,31 @@
 <template>
-  <div class="container">
-    <button class="wuli-btn" @getuserinfo="getUersInfo" open-type="getUserInfo" lang="zh_CN">获取用户数据</button>
-    <template v-if="userInfo">
-        <image :src="userInfo.avatarUrl" mode="aspectFit" />
-        <div>名字：{{userInfo.nickName}}</div>
-        <div>位置：{{userInfo.city}}</div>
-    </template>
-    <button class="wuli-btn" @click="toggleVisible">弹出层</button>
-    <!-- <button @click="goHandle(2)">页面跳转</button>
-    <button @click="showHandle">跟单测试接口</button>
-    <button @click="clickHandle">登录</button>
-    <div>{{info.str_status}}</div>    
-    <radio-group class="radio-group" @change="radioChange">
-      <label class="radio" v-for="item in items" :key="item.name">
-        <radio :value="item.name" :checked="item.checked"/> {{item.value}}
-      </label>
-    </radio-group>
-    <picker mode="date" :value="date" start="2015-09-01" end="2017-09-01" @change="bindDateChange">
-        当前选择: {{date}}
-    </picker> -->
-    <div class="wuli-popup" :class="[visible ? 'wuli-popup__show' : '']">
-        <div class="wuli-popup__mask" @click.stop="toggleVisible"></div>
-        <div class="wuli-popup__container">
-            dsdsdsdsdsdsdsd
+    <div class="container">
+        <button class="wuli-btn" @getuserinfo="getUersInfo" open-type="getUserInfo" lang="zh_CN">获取用户数据</button>
+        <template v-if="userInfo">
+            <image :src="userInfo.avatarUrl" mode="aspectFit" />
+            <div>名字：{{userInfo.nickName}}</div>
+            <div>位置：{{userInfo.city}}</div>
+        </template>
+        <button class="wuli-btn" @click="toggleVisible">弹出层</button>
+        <!-- <button @click="goHandle(2)">页面跳转</button>
+        <button @click="showHandle">跟单测试接口</button>
+        <button @click="clickHandle">登录</button>
+        <div>{{info.str_status}}</div>    
+        <radio-group class="radio-group" @change="radioChange">
+        <label class="radio" v-for="item in items" :key="item.name">
+            <radio :value="item.name" :checked="item.checked"/> {{item.value}}
+        </label>
+        </radio-group>
+        <picker mode="date" :value="date" start="2015-09-01" end="2017-09-01" @change="bindDateChange">
+            当前选择: {{date}}
+        </picker> -->
+        <div class="wuli-popup" :class="[visible ? 'wuli-popup__show' : '']">
+            <div class="wuli-popup__mask" @click.stop="toggleVisible"></div>
+            <div class="wuli-popup__container">
+                dsdsdsdsdsdsdsd
+            </div>
         </div>
     </div>
-  </div>
 </template>
 
 <script>

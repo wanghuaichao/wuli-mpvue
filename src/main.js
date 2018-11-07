@@ -28,14 +28,20 @@ export default {
             navigationBarTextStyle: 'black'
         },
         tabBar: {
-            "color": "#202020",
-            "selectedColor": "#ec5045",
+            "color": "#000",
+            "selectedColor": "#409EFF",
+            "borderStyle": "white",
+            "backgroundColor": "#ffffff",
             "list": [{
-                pagePath: "pages/button/main",
-                text: "按钮"
+                pagePath: "pages/dashboard/main",
+                text: "组件类",
+                iconPath: "/static/img/icon-fun.png",
+                selectedIconPath: "/static/img/icon-fun-selected.png"
             }, {
-                pagePath: "pages/cell/main",
-                text: "单元格"
+                pagePath: "pages/apply/main",
+                text: "个人",
+                iconPath: "/static/img/icon-person.png",
+                selectedIconPath: "/static/img/icon-person-selected.png"
             }]
         }
     }

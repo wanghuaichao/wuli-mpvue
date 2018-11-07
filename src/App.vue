@@ -15,7 +15,7 @@ export default {
     box-sizing: border-box;
 }
 // 全局样式
-@import '~@/assets/less/common/format';
+@import '~@/assets/less/common/format.less';
 @import '~@/assets/fonts/iconfont.css';
 @import '~@/assets/less/packages.less';
 </style>
