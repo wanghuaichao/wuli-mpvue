@@ -12,36 +12,43 @@
         </div>
         <div class="wuli-panel__title">wuli ui的switch组件</div>
         <div class="wuli-panel">
-            <wp-switch checked />
+            <wp-switch checked @change="getValue"/>
+            <wp-switch />
+        </div>
+        <div class="wuli-panel__title">wuli ui的switch组件，带文字提示的(text=1时显示文字为on和off；text=2是显示开和关)</div>
+        <div class="wuli-panel">
+            <wp-switch />
+            <wp-switch checked text='1'/>
+            <wp-switch checked text='2'/>
         </div>
     </div>
 </template>
 
 <script>
-import wpSwitch from "@/components/switch"
-
+import wpSwitch from "@/components/switch";
 export default {
-    data() {
-        return {
-
-        }
+  data() {
+    return {};
+  },
+  methods: {
+    switch1Change: function(e) {
+      console.log("switch1 发生 change 事件，携带值为", e.mp.detail.value);
     },
-    methods: {
-        switch1Change(e) {
-            console.log("switch1 发生 change 事件，携带值为", e.mp.detail.value)
-        },
-        switch2Change(e) {
-            console.log("switch2 发生 change 事件，携带值为", e.mp.detail.value)
-        }
+    switch2Change: function(e) {
+      console.log("switch2 发生 change 事件，携带值为", e.mp.detail.value);
     },
-    components: {
-        wpSwitch
+    getValue(val){
+      console.log('改变的值',val)
     }
-}
+  },
+  components: {
+      wpSwitch
+  }
+};
 </script>
 
 <style>
 .wuli-panel {
-    padding: 10px;
+  padding: 10px;
 }
 </style>
