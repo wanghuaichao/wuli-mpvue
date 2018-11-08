@@ -11,6 +11,16 @@
     border-radius: 15px;
     background: @--color-border;
     border: 1px solid @--color-border;
+    & + .wuli-switch {
+        margin-left: 5px;
+    }
+    &_word{
+        display:inline-block;
+        font-size:14px;
+        position:relative;
+        left:6px;
+        color:#fff;
+    }
     &__circle {
         position: absolute;
         top: 0;
@@ -31,6 +41,7 @@
         left: -1px;
         width: 52px;
         height: 30px;
+        line-height: 30px;
         background: #fff;
         border-radius: 26px;
         display: inline-block;
@@ -39,10 +50,13 @@
         transition: transform .35s cubic-bezier(.45, 1, .4, 1);
         transform: scale(0);
         transform-origin: 36px 16px;
+        text-align: right;
+        font-size: 14px;
+        padding-right:6px;
     }
     &__on {
         .wuli-switch__circle {
-            transform: translateX(20px);
+            transform: translateX(22px);
         }
     }
     &__off {
