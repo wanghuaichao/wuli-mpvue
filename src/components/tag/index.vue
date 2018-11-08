@@ -1,30 +1,37 @@
 <template>
-    <span class="wuli-tag"
-        >
+    <div class="wuli-tag" 
+        :class="[
+            type ? 'wuli-tag__' + type : '',
+            color ? 'wuli-tag__custom' : '',
+            round ? 'wuli-tag__round':'',
+            border ? 'wuli-tag__border--' + border: '',
+            size?'wuli-tag__size--'+size:'']" 
+        :style="[color ? 'background-color:' + color : '' ]"
+        @click="click">
         <slot></slot>
-    </span>
+        <i class="wuliFonts icon-cha-copy wuli-tag__icon" v-if="closable"></i>
+    </div>
 </template>
 
 <script>
 export default {
     props: {
-        size: String,
         type: String,
-        mark: Boolean,
         color: String,
-        plain: Boolean,
-        round: Boolean
-  },
-  data() {
+        round:Boolean,
+        border:String,
+        closable:Boolean,
+        size:String
+    },
+    data() {
         return {
-            
-        }
-    },
-    computed: {
-        
-    },
-    methods: {
 
         }
+    },
+    methods: {
+        click(e) {
+            this.$emit('click', e)
+        }
+    }
 }
 </script>

@@ -9,6 +9,14 @@ export default {
             {
                 name: 'Cell 单元格',
                 path: '/pages/cell/main'
+            },
+            {
+                name: 'Tag 标签',
+                path: '/pages/tag/main'
+            },
+            {
+                name: 'Switch 开关',
+                path: '/pages/switch/main'
             }
         ]
     }

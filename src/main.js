@@ -18,7 +18,9 @@ export default {
         pages: [
             '^pages/dashboard/main', 
             'pages/button/main',
-            'pages/cell/main'
+            'pages/cell/main',
+            'pages/tag/main',
+            'pages/switch/main'
         ],
         window: {
             backgroundTextStyle: 'light',

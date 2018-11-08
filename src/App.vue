@@ -11,9 +11,9 @@ export default {
 </script>
 
 <style lang="less">
-* {
-    box-sizing: border-box;
-}
+* {box-sizing: border-box;}
+view,button,image,text{box-sizing: border-box;}
+.wuliFonts {display: inline-block;}
 // 全局样式
 @import '~@/assets/less/common/format.less';
 @import '~@/assets/fonts/iconfont.css';
