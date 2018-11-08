@@ -31,7 +31,7 @@
 
         <div class="wuli-panel__title">可删除标签</div>
         <div class="wuli-panel">
-            <wp-tag :border="p.type" v-for="(p, index) of tagsList" :key="index" closable @click="delHandle(index)">{{p.info}}</wp-tag>
+            <wp-tag :border="p.type" v-for="(p, index) of tagsList" :key="index" closable @click="delHandle(index)">标签</wp-tag>
         </div>
 
         <div class="wuli-panel__title">标签大小</div>
@@ -53,24 +53,19 @@ export default {
         return {
             tagsList: [
                 {
-                    type: 'danger',
-                    info: '标签一' 
+                    type: 'danger'
                 },
                 {
-                    type: 'primary',
-                    info: '标签二' 
+                    type: 'primary'
                 },
                 {
-                    type: 'success',
-                    info: '标签三' 
+                    type: 'success'
                 },
                 {
-                    type: 'warning',
-                    info: '标签四' 
+                    type: 'warning'
                 },
                 {
-                    type: 'info',
-                    info: '标签五' 
+                    type: 'info'
                 }
             ]
         }
