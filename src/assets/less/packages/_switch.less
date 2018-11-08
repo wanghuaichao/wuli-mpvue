@@ -14,13 +14,6 @@
     & + .wuli-switch {
         margin-left: 5px;
     }
-    &_word{
-        display:inline-block;
-        font-size:14px;
-        position:relative;
-        left:6px;
-        color:#fff;
-    }
     &__circle {
         position: absolute;
         top: 0;
@@ -63,6 +56,12 @@
         .wuli-switch__bg {
             transform: scale(1);
         }
+        .wuli-switch__circle2 {
+            transform: translateX(0)!important;
+        }
+        .wuli-switch__bg2{
+            width:56px;
+        }
     }
     &__disabled {
         opacity: .4;
@@ -76,6 +75,21 @@
         background: url(https://img.yzcdn.cn/public_files/2017/02/24/9acec77d91106cd15b8107c4633d9155.png) no-repeat;
         background-size: 16px 16px;
         animation: wuli-switch-loading .8s infinite linear;
+    }
+    &_word{
+        display:inline-block;
+        font-size:14px;
+        position:relative;
+        left:6px;
+        top:-3px;
+        color:#fff;
+    }
+    &__text{
+        width:56px;
+        line-height: 30px;
+        .wuli-switch__circle {
+            transform: translateX(26px);
+        }
     }
 }
 
