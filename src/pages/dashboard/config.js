@@ -17,6 +17,14 @@ export default {
             {
                 name: 'Switch 开关',
                 path: '/pages/switch/main'
+            },
+            {
+                name: 'Badge 徽章',
+                path: '/pages/badge/main'
+            },
+            {
+                name: 'Progress 进度条',
+                path: '/pages/progress/main'
             }
         ]
     }

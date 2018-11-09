@@ -15,6 +15,13 @@
             <wp-switch checked @change="getValue"/>
             <wp-switch />
         </div>
+        <div class="wuli-panel__title">wuli ui的switch组件 自定义颜色</div>
+        <div class="wuli-panel">
+            <wp-switch checked @change="getValue" color="#CCFFFF"/>
+            <wp-switch checked color="#66FFCC"/>
+            <wp-switch checked color="#FF3333"/>
+            <wp-switch checked color="#ff3366"/>
+        </div>
         <div class="wuli-panel__title">wuli ui的switch组件，带文字提示的(text=1时显示文字为on和off；text=2是显示开和关)</div>
         <div class="wuli-panel">
             <wp-switch />
