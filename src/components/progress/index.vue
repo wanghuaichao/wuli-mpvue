@@ -3,6 +3,7 @@
     <canvas v-if="canvasId" :style="canvasUnit" class="hut-progress-inner" :canvas-id="canvasId"></canvas>
     <canvas v-if="canvasId" :style="canvasUnit" class="hut-progress" :canvas-id="canvasId + '-inner'"></canvas>
     <div class="hut-text">
+      {{percent * 100}}%
       <slot name="txt"></slot>
     </div>
   </div>
@@ -160,9 +161,10 @@ export default {
 .hut-progressbar .hut-text {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
   left: 0;
+  width: 100%;
   text-align: center;
+  transform: translateY(-50%);
+  font-size: 16px;
 }
 </style>

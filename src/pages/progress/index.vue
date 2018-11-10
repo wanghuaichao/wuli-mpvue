@@ -5,19 +5,13 @@
         <div class="wuli-panel__title">基本进度条（环形）</div>
         <div class="wuli-panel" style="display:flex;">
             <div class="cont">
-                <wp-progress unit="200" :percent="percent" canvasId="progress" strokeType="round">
-                    <span slot="text">{{percent * 100}}%</span>
-                </wp-progress>
+                <wp-progress unit="200" :percent="percent" canvasId="progress" strokeType="round"></wp-progress>
             </div>
             <div class="cont">
-                <wp-progress unit="200" :percent="percents" canvasId="progresss" strokeType="round" strokeColor="#ff0000" strokeWidth='1'>
-                    <span slot="progresss">{{percents * 100}}%</span>
-                </wp-progress>
+                <wp-progress unit="200" :percent="percent2" canvasId="progress2" strokeType="round" strokeColor="#ff0000" strokeWidth='1'></wp-progress>
             </div>
             <div class="cont">
-                <wp-progress unit="200" :percent="percent3" canvasId="progress3" strokeType="round" strokeColor="#66FF66" strokeWidth='1'>
-                    <span slot="progress3">{{percent3 * 100}}%</span>
-                </wp-progress>
+                <wp-progress unit="200" :percent="percent3" canvasId="progress3" strokeType="round" strokeColor="#66FF66" strokeWidth='1'></wp-progress>
             </div>
         </div>
     </div>
@@ -29,7 +23,7 @@ export default {
   data() {
     return {
       percent: 0.2,
-      percents:0.9,
+      percent2:0.9,
       percent3:1
     };
   },
